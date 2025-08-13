@@ -1,43 +1,106 @@
-// FAQ Accordion Block Styles
 .em-faq-accordion {
   max-width: 700px;
-  margin: 2rem auto;
-  background: #fff;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
-  padding: 2rem;
+  margin: 2.5rem auto;
+  background: #f3f3f3;
+  border-radius: 12px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  padding: 2.5rem 2rem;
+  font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+  color: #111;
+  font-weight: 500;
+  counter-reset: faq;
 }
 
 .faq-item {
-  margin-bottom: 1.5rem;
-  border-bottom: 1px solid #eee;
-  padding-bottom: 1rem;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid #e2e8f0;
+  padding-bottom: 1.5rem;
+  transition: box-shadow 0.2s;
 }
 
 .faq-question {
   background: none;
   border: none;
-  font-size: 1.1rem;
-  font-weight: 600;
-  color: #333;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #111;
   cursor: pointer;
   width: 100%;
   text-align: left;
-  padding: 0.5rem 0;
-  transition: color 0.2s;
+  padding: 0.75rem 0 0.75rem 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  transition: color 0.2s, background 0.2s;
+  border-radius: 6px;
+  position: relative;
+  counter-increment: faq;
 }
 
-.faq-question[aria-expanded="true"] {
+.faq-question:hover,
+.faq-question:focus {
+  background: #e6f4fa;
   color: #007cba;
+  outline: none;
 }
 
+.faq-question::before {
+  .faq-question:hover,
+  .faq-question:focus {
+    background: #e6f4fa;
+    color: #007cba;
+    outline: none;
+  }
+
+  .faq-question::before {
+    content: 'Q' counter(faq) ': ';
+    font-size: 1rem;
+    color: #007cba;
+    font-weight: bold;
+    margin-right: 0.5rem;
+  }
+
+  .faq-question[aria-expanded="true"] {
+    color: #007cba;
+    background: #e6f4fa;
+  }
+
+  .faq-question[aria-expanded="true"]::before {
+    transform: rotate(-180deg);
+  }
+
+    justify-content: flex-start;
+
+.faq-question::after {
+  content: '+'; 
+  font-size: 1.25rem;
+  color: #007cba;
+  font-weight: bold;
+  margin-left: auto;
+  transition: transform 0.3s;
+}
+
+.faq-question[aria-expanded="true"]::after {
+  content: '-';
+}
+  animation: fadeIn 0.3s;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
 .faq-answer {
-  margin-top: 0.5rem;
-  color: #555;
-  font-size: 1rem;
-  line-height: 1.6;
+  color: #111;
+  font-size: 1.05rem;
+  font-weight: 500;
+  line-height: 1.7;
+  background: #f9f9f9;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  padding: 1rem 1.25rem;
+  animation: fadeIn 0.3s;
 }
-
 // Editor only styles
 .block-editor .em-faq-accordion {
   box-shadow: 0 0 0 2px #007cba33;
