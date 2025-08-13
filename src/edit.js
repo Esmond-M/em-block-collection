@@ -46,6 +46,14 @@ export default function Edit({ attributes, setAttributes }) {
         if (editIndex === idx) cancelEdit();
     };
 
+    const moveFaq = (from, to) => {
+        if (to < 0 || to >= faqs.length) return;
+        const updatedFaqs = [...faqs];
+        const [moved] = updatedFaqs.splice(from, 1);
+        updatedFaqs.splice(to, 0, moved);
+        setAttributes({ faqs: updatedFaqs });
+    };
+
     return (
         <>
             <InspectorControls>
@@ -86,9 +94,20 @@ export default function Edit({ attributes, setAttributes }) {
                             <>
                                 <strong>{faq.question}</strong>
                                 <div>{faq.answer}</div>
-                                <div style={{ marginTop: '8px' }}>
+                                <div style={{ marginTop: '8px', display: 'flex', gap: '8px' }}>
                                     <Button isSecondary onClick={() => startEdit(idx)} style={{ marginRight: '8px' }}>Edit</Button>
-                                    <Button isDestructive onClick={() => deleteFaq(idx)}>Delete</Button>
+                                    <Button isDestructive onClick={() => deleteFaq(idx)} style={{ marginRight: '8px' }}>Delete</Button>
+                                    <Button
+                                        isSecondary
+                                        disabled={idx === 0}
+                                        onClick={() => moveFaq(idx, idx - 1)}
+                                        style={{ marginRight: '4px' }}
+                                    >↑</Button>
+                                    <Button
+                                        isSecondary
+                                        disabled={idx === faqs.length - 1}
+                                        onClick={() => moveFaq(idx, idx + 1)}
+                                    >↓</Button>
                                 </div>
                             </>
                         )}
