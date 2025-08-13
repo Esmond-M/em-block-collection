@@ -1,6 +1,7 @@
 # EM Block FAQ Accordion
 
 **Project:** EM Block FAQ Accordion  
+**Repository:** [GitHub - Esmond-M/em-block-faq-accordion](https://github.com/Esmond-M/em-block-faq-accordion)  
 **Author:** [esmondmccain.com](https://esmondmccain.com/)
 
 ## Overview
