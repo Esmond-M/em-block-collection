@@ -1,15 +1,16 @@
 <?php
-
 declare(strict_types=1);
 namespace emBlockFaqAccordion;
 
 class emBlockFaqAccordion
 {
+    // Register block and hook up server-side rendering
     public function __construct()
     {
         add_action('init', [$this, 'em_block_faq_accordion_init']);
     }
 
+    // Render the FAQ accordion block markup
     public function em_block_faq_accordion_content($attributes)
     {
         $faqs = $attributes['faqs'] ?? [];
@@ -31,6 +32,7 @@ class emBlockFaqAccordion
         return ob_get_clean();
     }
 
+    // Register the block type using build folder and set render callback
     public function em_block_faq_accordion_init()
     {
         register_block_type(
