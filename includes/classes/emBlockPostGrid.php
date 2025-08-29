@@ -179,7 +179,6 @@ class emBlockPostGrid
      */
     public function em_block_posts_grid_block_init()
     {
-        error_log('Registering EM Block Posts Grid');
         register_block_type(
             dirname(__DIR__, 2) . '/build/posts-grid',
             [
