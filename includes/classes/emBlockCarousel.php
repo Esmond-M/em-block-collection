@@ -22,10 +22,14 @@ class emBlockCarousel
   private function enqueue_assets()
   {
     $plugin_url = plugin_dir_url(dirname(__DIR__, 2) . '/em-block-carousel.php');
-    // Slick CSS
+    $min_css = $plugin_url . 'assets/css/slick.min.css';
+    $normal_css = $plugin_url . 'assets/css/slick.css';
+    // Use minified CSS if it exists, otherwise fallback
+    $css_path = dirname(__DIR__, 2) . '/assets/css/slick.min.css';
+    $css_url = file_exists($css_path) ? $min_css : $normal_css;
     wp_enqueue_style(
       'em-block-carousel-slick',
-      $plugin_url . 'assets/css/slick.css',
+      $css_url,
       [],
       '1.8.1'
     );
