@@ -1,10 +1,11 @@
 {
 	"$schema": "https://schemas.wp.org/trunk/block.json",
 	"apiVersion": 3,
-	"name": "em-block-carousel/em-block-carousel",
+	"name": "em-block-collection/em-block-carousel",
 	"version": "0.1.0",
 	"title": "EM Carousel",
 	"category": "widgets",
+
     "description": "Scrollable, responsive carousel of recent posts.",
 	"example": {},
 	"supports": {
@@ -20,7 +21,7 @@
 	"orderBy": { "type": "string", "default": "date" },
 	"maxWidth": { "type": "number", "default": 1200 }
     },
-	"textdomain": "em-block-carousel",
+	"textdomain": "em-block-collection",
 	"editorScript": "file:./index.js",
 	"editorStyle": "file:./index.css",
 	"style": "file:./style-index.css",
