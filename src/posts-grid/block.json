@@ -1,7 +1,7 @@
 {
 	"$schema": "https://schemas.wp.org/trunk/block.json",
 	"apiVersion": 3,
-	"name": "em-block-posts-grid/em-block-posts-grid",
+	"name": "em-block-collection/em-block-posts-grid",
 	"version": "0.1.0",
 	"title": "EM Posts Grid",
 	"category": "widgets",
@@ -64,7 +64,7 @@
             "default": "date"
         }
     },
-	"textdomain": "em-block-posts-grid",
+	"textdomain": "em-block-collection",
 	"editorScript": "file:./index.js",
 	"editorStyle": "file:./index.css",
 	"style": "file:./style-index.css",
