@@ -1,3 +1,3 @@
 import './faq-accordion';
 import './carousel';
-import './post-grid';
+import './posts-grid';
