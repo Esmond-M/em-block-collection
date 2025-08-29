@@ -5,12 +5,13 @@
 
 ## Overview
 
-EM Block Collection is a WordPress plugin that adds custom Gutenberg blocks to your site. Easily display interactive content such as FAQs and carousels with modern, responsive blocks.
+EM Block Collection is a WordPress plugin that adds custom Gutenberg blocks to your site. Easily display interactive content such as FAQs, carousels, and post grids with modern, responsive blocks.
 
 ## Included Blocks
 
 - **FAQ Accordion:** Display frequently asked questions in a clean, interactive accordion format.
 - **Carousel:** Show a responsive, scrollable carousel of recent posts or custom post types.
+- **Posts Grid:** Display posts or pages in a customizable grid or list layout, with options for featured images, excerpts, and meta.
 
 ## Features
 
@@ -28,7 +29,7 @@ EM Block Collection is a WordPress plugin that adds custom Gutenberg blocks to y
 
 ## Usage
 
-1. In the WordPress block editor, search for **"FAQ Accordion"** or **"Carousel"** in the Widgets section.
+1. In the WordPress block editor, search for **"FAQ Accordion"**, **"Carousel"**, or **"Posts Grid"** in the Widgets section.
 2. Add the desired block to your page or post.
 3. Use the block settings to customize content and appearance.
 4. Save and view your page to see the blocks in action.
