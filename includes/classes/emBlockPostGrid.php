@@ -12,7 +12,7 @@
  */
 
 declare(strict_types=1);
-namespace emBlockPostGrid;
+namespace emBlockCollection;
 
 class emBlockPostGrid
 {

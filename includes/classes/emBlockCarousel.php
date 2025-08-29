@@ -9,7 +9,7 @@
  * @link     esmondmccain.com
  */
 declare(strict_types=1);
-namespace emBlockCarousel;
+namespace emBlockCollection;
 class emBlockCarousel
 {
     /**

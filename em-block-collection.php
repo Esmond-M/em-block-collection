@@ -15,12 +15,12 @@ declare(strict_types=1);
 
 defined('ABSPATH') or die();
 
-// Autoload classes if using Composer, otherwise require manually
+// Include block classes
 require_once plugin_dir_path(__FILE__) . 'includes/classes/emBlockFaqAccordion.php';
 require_once plugin_dir_path(__FILE__) . 'includes/classes/emBlockCarousel.php';
 require_once plugin_dir_path(__FILE__) . 'includes/classes/emBlockPostGrid.php';
 
 // Instantiate block classes
-new \emBlockFaqAccordion\emBlockFaqAccordion();
-new \emBlockCarousel\emBlockCarousel();
-new \emBlockPostGrid\emBlockPostGrid();
+new \emBlockCollection\emBlockFaqAccordion();
+new \emBlockCollection\emBlockCarousel();
+new \emBlockCollection\emBlockPostGrid();
