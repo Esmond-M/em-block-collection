@@ -1,3 +1,4 @@
+
 import { __ } from '@wordpress/i18n';
 import { useSelect } from '@wordpress/data';
 import { InspectorControls, useBlockProps } from '@wordpress/block-editor';
@@ -36,6 +37,7 @@ export default function Edit({ attributes, setAttributes }) {
       margin: 'auto',
     },
   });
+
 
   return (
     <>
