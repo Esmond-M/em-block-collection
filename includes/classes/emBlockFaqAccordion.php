@@ -36,7 +36,7 @@ class emBlockFaqAccordion
     public function em_block_faq_accordion_init()
     {
         register_block_type(
-            dirname(__DIR__, 2) . '/build',
+            dirname(__DIR__, 2) . '/build/faq-accordion',
             [
                 'render_callback' => [$this, 'em_block_faq_accordion_content']
             ]
