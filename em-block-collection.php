@@ -29,10 +29,13 @@ namespace emBlockCollection;
 
 use emBlockFaqAccordion\emBlockFaqAccordion;
 use emBlockCarousel\emBlockCarousel;
+use emBlockPostGrid\emBlockPostGrid;
 defined('ABSPATH') or die();
 
 require_once plugin_dir_path(__FILE__) . 'includes/classes/emBlockFaqAccordion.php';
 require_once plugin_dir_path(__FILE__) . 'includes/classes/emBlockCarousel.php';
+require_once plugin_dir_path(__FILE__) . 'includes/classes/emBlockPostGrid.php';
 
 new emBlockFaqAccordion();
 new emBlockCarousel();
+new emBlockPostGrid();
