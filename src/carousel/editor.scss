@@ -1,0 +1,12 @@
+/**
+ *
+ * Styles specific to the block's user interface.
+ *
+ */
+@import 'scss/variables';
+
+.carousel.is-editor {
+  .card.is-skeleton {
+    .card__media { background: #e5e7eb; height: 140px; }
+  }
+}
