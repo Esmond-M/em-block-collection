@@ -1,14 +1,14 @@
 {
-  "name": "em-block-faq-accordion",
+  "name": "em-block-collection",
   "version": "0.1.0",
-  "description": "WordPress Gutenberg block plugin for FAQ accordion display.",
+  "description": "A collection of WordPress custom Gutenberg blocks.",
   "author": "Esmond Mccain <esmondmccain@gmail.com>",
   "license": "GPL-2.0-or-later",
   "main": "src/index.js",
   "files": [
     "/build",
     "/assets",
-    "em-block-faq-accordion.php",
+    "em-block-collection.php",
     "/includes"
   ],
   "scripts": {
