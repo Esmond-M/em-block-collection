@@ -8,6 +8,8 @@ module.exports = merge(defaultConfig, {
         'faq-accordion/view': path.resolve(__dirname, 'src/faq-accordion/view.js'),
         'carousel/index': path.resolve(__dirname, 'src/carousel/index.js'),
         'carousel/view': path.resolve(__dirname, 'src/carousel/view.js'),
+        'posts-grid/index': path.resolve(__dirname, 'src/posts-grid/index.js'),
+        'posts-grid/view': path.resolve(__dirname, 'src/posts-grid/view.js'),
     },
     output: {
         path: path.resolve(__dirname, 'build'),
