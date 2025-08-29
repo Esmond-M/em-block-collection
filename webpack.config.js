@@ -6,7 +6,6 @@ module.exports = merge(defaultConfig, {
     entry: {
         'faq-accordion/index': path.resolve(__dirname, 'src/faq-accordion/index.js'),
         'faq-accordion/view': path.resolve(__dirname, 'src/faq-accordion/view.js'),
-        'new-block/index': path.resolve(__dirname, 'src/new-block/index.js'),
         'carousel/index': path.resolve(__dirname, 'src/carousel/index.js'),
         'carousel/view': path.resolve(__dirname, 'src/carousel/view.js'),
     },
