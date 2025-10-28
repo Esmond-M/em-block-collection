@@ -10,6 +10,7 @@ module.exports = merge(defaultConfig, {
         'carousel/view': path.resolve(__dirname, 'src/carousel/view.js'),
         'posts-grid/index': path.resolve(__dirname, 'src/posts-grid/index.js'),
         'posts-grid/view': path.resolve(__dirname, 'src/posts-grid/view.js'),
+        'spacer-divider/index': path.resolve(__dirname, 'src/spacer-divider/index.js'),
     },
     output: {
         path: path.resolve(__dirname, 'build'),
