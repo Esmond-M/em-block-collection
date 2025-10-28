@@ -18,7 +18,7 @@ defined('ABSPATH') or die();
 /**
  * Main plugin class for EM Block Collection
  */
-class EmBlockCollection
+final class EmBlockCollection
 {
     /**
      * Constructor: Initialize the plugin
