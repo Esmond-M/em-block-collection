@@ -14,7 +14,7 @@ EM Block Collection is a professional WordPress plugin that adds custom Gutenber
 
 All blocks are organized under the **"EM Blocks"** category for easy discovery.
 
-### 🎠 **EM Carousel**
+### **EM Carousel**
 - **Purpose:** Display posts in a responsive, scrollable carousel
 - **Features:** 
   - Customizable post count and categories
@@ -23,7 +23,7 @@ All blocks are organized under the **"EM Blocks"** category for easy discovery.
   - Mobile-responsive design
 - **Category:** EM Blocks
 
-### ❓ **EM FAQ Accordion**
+### **EM FAQ Accordion**
 - **Purpose:** Display frequently asked questions in an interactive accordion
 - **Features:**
   - Add unlimited FAQ items
@@ -32,7 +32,7 @@ All blocks are organized under the **"EM Blocks"** category for easy discovery.
   - Easy content management
 - **Category:** EM Blocks
 
-### 📋 **EM Posts Grid**
+### **EM Posts Grid**
 - **Purpose:** Show posts in customizable grid or list layouts
 - **Features:**
   - Multiple layout options (grid/list)
@@ -42,7 +42,7 @@ All blocks are organized under the **"EM Blocks"** category for easy discovery.
   - Custom post type support
 - **Category:** EM Blocks
 
-### 📏 **EM Spacer + Divider Pro** ⭐ *NEW*
+### **EM Spacer + Divider Pro** 
 - **Purpose:** Add customizable spacing and dividers between content sections
 - **Features:**
   - Flexible spacing controls (top/bottom)
@@ -53,15 +53,15 @@ All blocks are organized under the **"EM Blocks"** category for easy discovery.
   - Custom CSS class support
 - **Category:** EM Blocks
 
-## ✨ Features
+## Features
 
-- **🎨 Unified Block Category:** All blocks organized under "EM Blocks" for better discoverability
-- **📱 Responsive Design:** Mobile-first approach for all devices
-- **⚡ Performance Optimized:** Server-side rendering for fast loading
-- **🛠️ Professional Architecture:** Clean, object-oriented codebase
-- **🎯 WordPress Standards:** Follows modern WordPress development best practices
-- **🔧 Customizable:** Extensive options and settings for each block
-- **♿ Accessible:** Built with accessibility in mind
+- **Unified Block Category:** All blocks organized under "EM Blocks" for better discoverability
+- **Responsive Design:** Mobile-first approach for all devices
+- **Performance Optimized:** Server-side rendering for fast loading
+- **Professional Architecture:** Clean, object-oriented codebase
+- **WordPress Standards:** Follows modern WordPress development best practices
+- **Customizable:** Extensive options and settings for each block
+- **Accessible:** Built with accessibility in mind
 
 ## Installation
 
