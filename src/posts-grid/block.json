@@ -4,7 +4,7 @@
 	"name": "em-block-collection/em-block-posts-grid",
 	"version": "0.1.0",
 	"title": "EM Posts Grid",
-	"category": "widgets",
+	"category": "em-blocks",
 
 	"description": "Show posts in various formats",
 	"example": {},

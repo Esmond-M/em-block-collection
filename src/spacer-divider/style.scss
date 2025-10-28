@@ -1,0 +1,75 @@
+/* EM Spacer + Divider Pro Block Styles */
+
+.em-spacer-divider {
+	position: relative;
+	display: block;
+	width: 100%;
+	box-sizing: border-box;
+}
+
+.em-spacer-divider__divider {
+	position: absolute;
+	
+	&--position-top {
+		top: 0;
+	}
+	
+	&--position-center {
+		top: 50%;
+		transform: translateY(-50%);
+	}
+	
+	&--position-bottom {
+		bottom: 0;
+	}
+	
+	&--align-left {
+		left: 0;
+	}
+	
+	&--align-center {
+		left: 50%;
+		transform: translateX(-50%);
+	}
+	
+	&--align-right {
+		right: 0;
+	}
+	
+	&--style-solid {
+		background-color: var(--divider-color, #cccccc);
+	}
+	
+	&--style-dashed,
+	&--style-dotted,
+	&--style-double,
+	&--style-groove,
+	&--style-ridge {
+		background-color: transparent;
+		border-top-style: var(--divider-style, solid);
+		border-top-width: var(--divider-width, 2px);
+		border-top-color: var(--divider-color, #cccccc);
+	}
+}
+
+/* Editor specific styles */
+.block-editor-block-list__layout .em-spacer-divider {
+	border: 1px dashed #ccc;
+	background-color: rgba(0, 0, 0, 0.02);
+	
+	&:hover {
+		border-color: #007cba;
+		background-color: rgba(0, 124, 186, 0.05);
+	}
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+	.em-spacer-divider {
+		// Reduce spacing on mobile if needed
+		&[data-mobile-spacing="reduced"] {
+			padding-top: calc(var(--spacing-top, 40px) * 0.7);
+			padding-bottom: calc(var(--spacing-bottom, 40px) * 0.7);
+		}
+	}
+}

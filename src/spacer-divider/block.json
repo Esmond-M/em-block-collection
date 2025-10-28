@@ -1,0 +1,68 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "em-block-collection/em-block-spacer-divider",
+	"version": "0.1.0",
+	"title": "EM Spacer + Divider Pro",
+	"category": "em-blocks",
+	"description": "Add customizable spacing and dividers between content sections.",
+	"keywords": ["spacer", "divider", "spacing", "separator", "layout"],
+	"example": {},
+	"supports": {
+		"html": false,
+		"anchor": true,
+		"spacing": {
+			"margin": true,
+			"padding": true
+		}
+	},
+	"attributes": {
+		"spacingTop": { 
+			"type": "number", 
+			"default": 40 
+		},
+		"spacingBottom": { 
+			"type": "number", 
+			"default": 40 
+		},
+		"showDivider": { 
+			"type": "boolean", 
+			"default": false 
+		},
+		"dividerStyle": { 
+			"type": "string", 
+			"default": "solid",
+			"enum": ["solid", "dashed", "dotted", "double", "groove", "ridge"]
+		},
+		"dividerColor": { 
+			"type": "string", 
+			"default": "#cccccc" 
+		},
+		"dividerWidth": { 
+			"type": "number", 
+			"default": 2 
+		},
+		"dividerPosition": { 
+			"type": "string", 
+			"default": "center",
+			"enum": ["top", "center", "bottom"]
+		},
+		"dividerLength": { 
+			"type": "number", 
+			"default": 100 
+		},
+		"dividerAlignment": { 
+			"type": "string", 
+			"default": "center",
+			"enum": ["left", "center", "right"]
+		},
+		"customClass": { 
+			"type": "string", 
+			"default": "" 
+		}
+	},
+	"textdomain": "em-block-collection",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css"
+}
