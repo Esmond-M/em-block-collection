@@ -4,7 +4,7 @@
 	"name": "em-block-collection/em-block-carousel",
 	"version": "0.1.0",
 	"title": "EM Carousel",
-	"category": "widgets",
+	"category": "em-blocks",
 
     "description": "Scrollable, responsive carousel of recent posts.",
 	"example": {},

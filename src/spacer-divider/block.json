@@ -4,7 +4,7 @@
 	"name": "em-block-collection/em-block-spacer-divider",
 	"version": "0.1.0",
 	"title": "EM Spacer + Divider Pro",
-	"category": "design",
+	"category": "em-blocks",
 	"description": "Add customizable spacing and dividers between content sections.",
 	"keywords": ["spacer", "divider", "spacing", "separator", "layout"],
 	"example": {},
