@@ -16,30 +16,75 @@ declare(strict_types=1);
 defined('ABSPATH') or die();
 
 /**
- * Register custom block category for EM Blocks
+ * Main plugin class for EM Block Collection
  */
-function em_block_collection_register_category($categories) {
-    return array_merge(
-        [
+class EmBlockCollection
+{
+    /**
+     * Constructor: Initialize the plugin
+     */
+    public function __construct()
+    {
+        $this->register_category_filter();
+        $this->include_and_instantiate_blocks();
+    }
+
+    /**
+     * Register custom block category for EM Blocks (public - used by WordPress filter)
+     */
+    public function register_block_category($categories)
+    {
+        return array_merge(
             [
-                'slug'  => 'em-blocks',
-                'title' => __('EM Blocks', 'em-block-collection'),
-                'icon'  => 'admin-plugins',
+                [
+                    'slug'  => 'em-blocks',
+                    'title' => __('EM Blocks', 'em-block-collection'),
+                    'icon'  => 'admin-plugins',
+                ],
             ],
-        ],
-        $categories
-    );
+            $categories
+        );
+    }
+
+    /**
+     * Register the category filter (private - internal setup)
+     */
+    private function register_category_filter()
+    {
+        add_filter('block_categories_all', [$this, 'register_block_category']);
+    }
+
+    /**
+     * Include and instantiate all blocks (private - internal setup)
+     */
+    private function include_and_instantiate_blocks()
+    {
+        $this->include_block_classes();
+        $this->instantiate_blocks();
+    }
+
+    /**
+     * Include all block class files (private - internal helper)
+     */
+    private function include_block_classes()
+    {
+        require_once plugin_dir_path(__FILE__) . 'includes/classes/emBlockFaqAccordion.php';
+        require_once plugin_dir_path(__FILE__) . 'includes/classes/emBlockCarousel.php';
+        require_once plugin_dir_path(__FILE__) . 'includes/classes/emBlockPostGrid.php';
+        require_once plugin_dir_path(__FILE__) . 'includes/classes/emBlockSpacerDivider.php';
+    }
+
+    /**
+     * Instantiate all block classes (private - internal helper)
+     */
+    private function instantiate_blocks()
+    {
+        new \emBlockCollection\emBlockFaqAccordion();
+        new \emBlockCollection\emBlockCarousel();
+        new \emBlockCollection\emBlockPostGrid();
+        new \emBlockCollection\emBlockSpacerDivider();
+    }
 }
-add_filter('block_categories_all', 'em_block_collection_register_category');
 
-// Include block classes
-require_once plugin_dir_path(__FILE__) . 'includes/classes/emBlockFaqAccordion.php';
-require_once plugin_dir_path(__FILE__) . 'includes/classes/emBlockCarousel.php';
-require_once plugin_dir_path(__FILE__) . 'includes/classes/emBlockPostGrid.php';
-require_once plugin_dir_path(__FILE__) . 'includes/classes/emBlockSpacerDivider.php';
-
-// Instantiate block classes
-new \emBlockCollection\emBlockFaqAccordion();
-new \emBlockCollection\emBlockCarousel();
-new \emBlockCollection\emBlockPostGrid();
-new \emBlockCollection\emBlockSpacerDivider();
+// Initialize the plugin with the class
+new EmBlockCollection();
