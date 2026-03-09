@@ -58,28 +58,45 @@ class emBlockPostGrid
      */
     public function em_block_posts_grid_content($attributes)
     {
+        $attributes = wp_parse_args($attributes ?? [], [
+            'postType'                => 'post',
+            'postsToShow'             => 5,
+            'order'                   => 'desc',
+            'orderBy'                 => 'date',
+            'displayFeaturedImage'    => false,
+            'displayPostDate'         => false,
+            'displayPostContent'      => false,
+            'displayPostContentRadio' => 'excerpt',
+            'excerptLength'           => 55,
+            'postLayout'              => 'list',
+            'columns'                 => 3,
+            'categories'              => null,
+            'align'                   => '',
+            'className'               => '',
+        ]);
+
         $args = [
-            'post_type'        => $attributes['postType'],
-            'posts_per_page'   => $attributes['postsToShow'],
+            'post_type'        => sanitize_key($attributes['postType']),
+            'posts_per_page'   => max(1, (int) $attributes['postsToShow']),
             'post_status'      => 'publish',
-            'order'            => $attributes['order'],
-            'orderby'          => $attributes['orderBy'],
+            'order'            => strtoupper($attributes['order']) === 'ASC' ? 'ASC' : 'DESC',
+            'orderby'          => sanitize_key($attributes['orderBy']),
             'suppress_filters' => false,
         ];
 
-        if (isset($attributes['categories'])) {
+        if (!empty($attributes['categories'])) {
             $args['category'] = $attributes['categories'];
         }
 
         $recent_posts = get_posts($args);
         $list_items_markup = '';
-        $excerpt_length = $attributes['excerptLength'];
+        $excerpt_length = (int) $attributes['excerptLength'];
 
         foreach ($recent_posts as $post) {
             $title = get_the_title($post);
             $image_url = get_the_post_thumbnail_url($post);
             if (!$title) {
-                $title = __('(no title)');
+                $title = __('(no title)', 'em-block-collection');
             }
 
             if (isset($attributes['displayFeaturedImage']) && $attributes['displayFeaturedImage'] === true) {
@@ -130,7 +147,7 @@ class emBlockPostGrid
                     $list_items_markup .= sprintf(
                         '<a href="%s">%s</a></div>',
                         esc_url(get_permalink($post)),
-                        __('Read more')
+                        __('Read more', 'em-block-collection')
                     );
                 } else {
                     $list_items_markup .= '</p>';

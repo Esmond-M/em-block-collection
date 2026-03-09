@@ -21,7 +21,7 @@ class emBlockCarousel
   }
   private function enqueue_assets()
   {
-    $plugin_url = plugin_dir_url(dirname(__DIR__, 2) . '/em-block-carousel.php');
+    $plugin_url = plugin_dir_url(dirname(__DIR__, 2) . '/em-block-collection.php');
     $min_css = $plugin_url . 'assets/css/slick.min.css';
     $normal_css = $plugin_url . 'assets/css/slick.css';
     // Use minified CSS if it exists, otherwise fallback
@@ -101,9 +101,9 @@ class emBlockCarousel
                     <h3 class="card__title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
                     <p class="card__meta"><?php echo esc_html( get_the_date() ); ?></p>
                     <?php if ( ! empty( $atts['showExcerpt'] ) ) : ?>
-                      <p class="card__excerpt"><?php echo esc_html( wp_trim_words( get_the_excerpt(), 20, '6' ) ); ?></p>
+                      <p class="card__excerpt"><?php echo esc_html( wp_trim_words( get_the_excerpt(), 20, '&hellip;' ) ); ?></p>
                     <?php endif; ?>
-                    <a class="btn btn--primary" href="<?php the_permalink(); ?>"><?php esc_html_e('Read more'); ?></a>
+                    <a class="btn btn--primary" href="<?php the_permalink(); ?>"><?php esc_html_e('Read more', 'em-block-collection'); ?></a>
                   </div>
                 </article>
               </div>

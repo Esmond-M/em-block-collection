@@ -73,11 +73,13 @@ class LatestPostsEdit extends Component {
 	
 		];
 	  
+		const hasPosts = Array.isArray( latestPosts ) && latestPosts.length;
+
 		const inspectorControls =  (
 			
 			<InspectorControls>
 				<PanelBody title={ __( 'Post type settings' ) }>
-	`				<SelectControl
+					<SelectControl
 						label="Post Type"
 						value={ postType  }
 						onChange={ ( value ) => setAttributes( { postType: value } ) }
@@ -158,7 +160,6 @@ class LatestPostsEdit extends Component {
 			</InspectorControls>
 		);
 
-		const hasPosts = Array.isArray( latestPosts ) && latestPosts.length;
 		if ( ! hasPosts ) {
 			return (
 				<>

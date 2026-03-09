@@ -1,4 +1,3 @@
-// ...existing code...
 // Block editor for EM FAQ Accordion
 import { useState } from '@wordpress/element';
 import { InspectorControls } from '@wordpress/block-editor';

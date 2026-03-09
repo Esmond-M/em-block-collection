@@ -32,7 +32,7 @@ class emBlockFaqAccordion
                         <?php echo esc_html($faq['question']); ?>
                     </button>
                     <div class="faq-answer" hidden>
-                        <?php echo esc_html($faq['answer']); ?>
+                        <?php echo wp_kses_post($faq['answer']); ?>
                     </div>
                 </div>
             <?php endforeach; ?>
