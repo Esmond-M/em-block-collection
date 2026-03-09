@@ -159,8 +159,8 @@ class emBlockPostGrid
         if (isset($attributes['postLayout']) && 'grid' === $attributes['postLayout']) {
             $class .= ' is-grid';
         }
-        if (isset($attributes['columns']) && 'grid' === $attributes['postLayout']) {
-            $class .= ' columns-' . $attributes['columns'];
+        if (isset($attributes['columns'])) {
+            $class .= ' columns-' . (int) $attributes['columns'];
         }
         if (isset($attributes['displayPostDate']) && $attributes['displayPostDate']) {
             $class .= ' has-dates';

@@ -10,14 +10,14 @@
     margin: 0;
 }
 
-.em-block-latest-posts__list.is-grid {
+.em-block-latest-posts__list {
     @media (min-width: 640px)  { --pg-columns: 2; }
     @media (min-width: 1024px) { --pg-columns: var(--pg-cols, 3); }
 }
 
 // columns-N sets the variable read above
 @for $i from 1 through 6 {
-    .em-block-latest-posts__list.is-grid.columns-#{$i} { --pg-cols: #{$i}; }
+    .em-block-latest-posts__list.columns-#{$i} { --pg-cols: #{$i}; }
 }
 
 // ── Card component ────────────────────────────────────────────────────────────
@@ -100,15 +100,4 @@
     }
 }
 
-// ── List layout: cards go side-by-side ───────────────────────────────────────
-.em-block-latest-posts__list:not(.is-grid) .pg-card {
-    @media (min-width: 640px) {
-        flex-direction: row;
 
-        .pg-card__media {
-            width: 200px;
-            flex-shrink: 0;
-            aspect-ratio: unset;
-        }
-    }
-}
