@@ -1,70 +1,88 @@
 .em-faq-accordion {
   max-width: 700px;
   margin: 2.5rem auto;
-  background: #f3f3f3;
+  background: #f8fafc;
   border-radius: 12px;
-  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
-  padding: 2.5rem 2rem;
-  font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
-  color: #111;
-  font-weight: 500;
-  counter-reset: faq;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+  padding: 2rem 1.75rem;
 }
 
 .faq-item {
-  margin-bottom: 2rem;
   border-bottom: 1px solid #e2e8f0;
-  padding-bottom: 1.5rem;
-  transition: box-shadow 0.2s;
+
+  &:last-child { border-bottom: none; }
 }
 
 .faq-question {
   background: none;
   border: none;
-  font-size: 1.15rem;
-  font-weight: 700;
-  color: #111;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1e293b;
   cursor: pointer;
   width: 100%;
   text-align: left;
-  padding: 0.75rem 0 0.75rem 0.5rem;
+  padding: 1rem 0;
   display: flex;
   align-items: center;
   gap: 0.75rem;
-  transition: color 0.2s, background 0.2s;
-  border-radius: 6px;
-  position: relative;
-  justify-content: flex-start;
+  transition: color 0.2s ease;
+
+  &:hover { color: #2563eb; }
+
+  &:focus-visible {
+    outline: 2px solid #2563eb;
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+
+  // CSS chevron — rotates smoothly instead of swapping +/-
+  &::after {
+    content: '';
+    display: block;
+    width: 0.5rem;
+    height: 0.5rem;
+    border-right: 2px solid #64748b;
+    border-bottom: 2px solid #64748b;
+    transform: rotate(45deg);   // pointing down ▾
+    transition: transform 0.3s ease, border-color 0.2s ease;
+    flex-shrink: 0;
+    margin-left: auto;
+  }
+
+  &[aria-expanded="true"] {
+    color: #2563eb;
+
+    &::after {
+      transform: rotate(-135deg); // flips to pointing up ▲
+      border-color: #2563eb;
+    }
+  }
 }
 
- .faq-question::after {
-  content: '+';
-  font-size: 1.25rem;
-  color: #007cba;
-  font-weight: bold;
-  margin-left: auto;
-  transition: transform 0.3s;
-}
-
-.faq-question[aria-expanded="true"]::after {
-  content: '-';
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(-8px); }
-  to { opacity: 1; transform: translateY(0); }
-}
+// Smooth height animation via CSS Grid trick (no JS height math needed)
 .faq-answer {
-  color: #111;
-  font-size: 1.05rem;
-  font-weight: 500;
-  line-height: 1.7;
-  background: #f9f9f9;
-  border-radius: 6px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
-  padding: 1rem 1.25rem;
-  animation: fadeIn 0.3s;
+  display: grid;
+  grid-template-rows: 0fr;
+  overflow: hidden;
+  transition: grid-template-rows 0.35s ease, opacity 0.35s ease;
+  opacity: 0;
+
+  &.is-open {
+    grid-template-rows: 1fr;
+    opacity: 1;
+  }
 }
+
+.faq-answer__inner {
+  overflow: hidden;
+  min-height: 0;
+  color: #334155;
+  font-size: 0.975rem;
+  line-height: 1.75;
+  padding: 0 0.25rem 1rem;
+}
+
 // Editor only styles
 .block-editor .em-faq-accordion {
   box-shadow: 0 0 0 2px #007cba33;

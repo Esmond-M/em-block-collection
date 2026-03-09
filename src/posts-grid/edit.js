@@ -73,11 +73,13 @@ class LatestPostsEdit extends Component {
 	
 		];
 	  
+		const hasPosts = Array.isArray( latestPosts ) && latestPosts.length;
+
 		const inspectorControls =  (
 			
 			<InspectorControls>
 				<PanelBody title={ __( 'Post type settings' ) }>
-	`				<SelectControl
+					<SelectControl
 						label="Post Type"
 						value={ postType  }
 						onChange={ ( value ) => setAttributes( { postType: value } ) }
@@ -142,23 +144,20 @@ class LatestPostsEdit extends Component {
 						onOrderByChange={ ( value ) => setAttributes( { orderBy: value } ) }
 						onNumberOfItemsChange={ ( value ) => setAttributes( { postsToShow: value } ) }
 					/>
-					{ postLayout === 'grid' && (
-						<RangeControl
-							label={ __( 'Columns' ) }
-							value={ columns }
-							onChange={ ( value ) => setAttributes( { columns: value } ) }
-							min={ 2 }
-							max={
-								! hasPosts ? MAX_POSTS_COLUMNS : Math.min( MAX_POSTS_COLUMNS, latestPosts.length )
-							}
-							required
-						/>
-					) }
+					<RangeControl
+						label={ __( 'Columns' ) }
+						value={ columns }
+						onChange={ ( value ) => setAttributes( { columns: value } ) }
+						min={ 1 }
+						max={
+							! hasPosts ? MAX_POSTS_COLUMNS : Math.min( MAX_POSTS_COLUMNS, latestPosts.length )
+						}
+						required
+					/>
 				</PanelBody>
 			</InspectorControls>
 		);
 
-		const hasPosts = Array.isArray( latestPosts ) && latestPosts.length;
 		if ( ! hasPosts ) {
 			return (
 				<>
@@ -202,7 +201,7 @@ class LatestPostsEdit extends Component {
 						'em-block-latest-posts__list': true,
 						'is-grid': postLayout === 'grid',
 						'has-dates': displayPostDate,
-						[ `columns-${ columns }` ]: postLayout === 'grid',
+						[ `columns-${ columns }` ]: columns > 1,
 					} ) }
 				>
 					{ displayPosts.map( ( post, i ) => {

@@ -31,8 +31,10 @@ class emBlockFaqAccordion
                     <button class="faq-question" aria-expanded="false">
                         <?php echo esc_html($faq['question']); ?>
                     </button>
-                    <div class="faq-answer" hidden>
-                        <?php echo esc_html($faq['answer']); ?>
+                    <div class="faq-answer" aria-hidden="true">
+                        <div class="faq-answer__inner">
+                            <?php echo wp_kses_post($faq['answer']); ?>
+                        </div>
                     </div>
                 </div>
             <?php endforeach; ?>
