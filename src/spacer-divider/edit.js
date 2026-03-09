@@ -11,7 +11,7 @@ import { __ } from '@wordpress/i18n';
  *
  * @see https://developer.wordpress.org/block-editor/reference-guides/packages/packages-block-editor/#useblockprops
  */
-import { useBlockProps, InspectorControls } from '@wordpress/block-editor';
+import { useBlockProps, InspectorControls, InspectorAdvancedControls } from '@wordpress/block-editor';
 import { 
 	PanelBody, 
 	ToggleControl, 
@@ -167,16 +167,16 @@ export default function Edit({ attributes, setAttributes }) {
 						</>
 					)}
 				</PanelBody>
-
-				<PanelBody title={__('Advanced', 'em-block-collection')} initialOpen={false}>
-					<TextControl
-						label={__('Custom CSS Class', 'em-block-collection')}
-						value={customClass}
-						onChange={(value) => setAttributes({ customClass: value })}
-						help={__('Add custom CSS classes for additional styling.', 'em-block-collection')}
-					/>
-				</PanelBody>
 			</InspectorControls>
+
+			<InspectorAdvancedControls>
+				<TextControl
+					label={__('Custom CSS Class', 'em-block-collection')}
+					value={customClass}
+					onChange={(value) => setAttributes({ customClass: value })}
+					help={__('Add custom CSS classes for additional styling.', 'em-block-collection')}
+				/>
+			</InspectorAdvancedControls>
 
 			<div {...blockProps}>
 				<div style={{ position: 'relative', height: '100%' }}>
