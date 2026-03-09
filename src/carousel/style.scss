@@ -15,8 +15,46 @@
 
 
 .em-slick-carousel {
+  position: relative;
   max-width: var(--em-carousel-max-width, 1200px);
   margin: auto;
+  padding-bottom: 2.5rem; // room for the dots row
+
+  // Override Slick's default position:absolute on dots so they stay
+  // inside the carousel section instead of escaping past sibling blocks.
+  .slick-dots {
+    position: static;
+    display: flex !important;
+    justify-content: center;
+    gap: .5rem;
+    margin: 1rem 0 0;
+    padding: 0;
+    list-style: none;
+
+    li {
+      margin: 0;
+      width: auto;
+      height: auto;
+
+      button {
+        width: .6rem;
+        height: .6rem;
+        border-radius: 50%;
+        border: 1px solid $color-btn-border;
+        background: transparent;
+        padding: 0;
+        cursor: pointer;
+        font-size: 0;
+
+        &::before { display: none; } // hide Slick's default • character
+      }
+
+      &.slick-active button {
+        background: $color-btn-primary;
+        border-color: $color-btn-primary;
+      }
+    }
+  }
 }
 
 
