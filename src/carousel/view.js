@@ -34,7 +34,6 @@ jQuery(document).ready(function($) {
       arrows: true,
       slidesToShow: 3,
       slidesToScroll: 1,
-      adaptiveHeight: true,
       pauseOnFocus: true,
       pauseOnHover: true,
       responsive: [

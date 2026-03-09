@@ -105,11 +105,19 @@
   background: $carousel-bg; color: $carousel-text;
   border-radius: $carousel-radius; box-shadow: $carousel-shadow;
   overflow: hidden;
-  display: grid; grid-template-rows: auto 1fr;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 
-  &__media img { display:block; width:100%; height:auto; }
+  &__media {
+    display: block;
+    aspect-ratio: 16 / 10;
+    overflow: hidden;
+    flex-shrink: 0;
+    img { display: block; width: 100%; height: 100%; object-fit: cover; }
+  }
 
-  &__body { padding: .9rem 1rem; }
+  &__body { padding: .9rem 1rem; flex: 1; display: flex; flex-direction: column; }
 
   &__title {
     margin: .25rem 0 .4rem;
@@ -119,7 +127,24 @@
 
   &__meta { color: $carousel-meta; font-size: .9rem; margin-bottom: .4rem; }
 
-  &__excerpt { margin: 0 0 .75rem; }
+  &__excerpt { margin: 0 0 .75rem; flex: 1; }
+}
+
+// Equal-height Slick slides
+.em-slick-carousel {
+  .slick-track {
+    display: flex;
+    align-items: stretch;
+  }
+  .slick-slide {
+    height: auto !important;
+    > div {
+      height: 100%;
+    }
+  }
+  .em-slick-slide {
+    height: 100%;
+  }
 }
 
 // Button sizing utility used in cards/hero etc.
