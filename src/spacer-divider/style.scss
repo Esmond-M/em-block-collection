@@ -35,6 +35,12 @@
 	&--align-right {
 		right: 0;
 	}
+
+	// When both position-center AND align-center are applied the individual
+	// transforms would overwrite each other; combine them explicitly.
+	&--position-center.em-spacer-divider__divider--align-center {
+		transform: translate(-50%, -50%);
+	}
 	
 	&--style-solid {
 		background-color: var(--divider-color, #cccccc);

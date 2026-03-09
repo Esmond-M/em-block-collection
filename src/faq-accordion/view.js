@@ -11,14 +11,23 @@ document.addEventListener('DOMContentLoaded', function () {
                 if (otherBtn !== btn) {
                     otherBtn.setAttribute('aria-expanded', 'false');
                     const otherAnswer = otherBtn.nextElementSibling;
-                    if (otherAnswer) otherAnswer.hidden = true;
+                    if (otherAnswer) {
+                        otherAnswer.classList.remove('is-open');
+                        otherAnswer.setAttribute('aria-hidden', 'true');
+                    }
                 }
             });
 
             btn.setAttribute('aria-expanded', String(!expanded));
             const answer = btn.nextElementSibling;
             if (answer) {
-                answer.hidden = expanded;
+                if (!expanded) {
+                    answer.classList.add('is-open');
+                    answer.setAttribute('aria-hidden', 'false');
+                } else {
+                    answer.classList.remove('is-open');
+                    answer.setAttribute('aria-hidden', 'true');
+                }
             }
         });
     });

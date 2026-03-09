@@ -187,10 +187,27 @@
 
 // Button sizing utility used in cards/hero etc.
 .btn {
+  display: inline-block;
+  padding: .5rem 1.1rem;
+  border: 1px solid transparent;
+  border-radius: $border-radius-btn;
+  font-size: .875rem;
+  font-weight: 600;
+  line-height: 1.5;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background .2s ease, border-color .2s ease, color .2s ease;
+
   &--primary {
     background: $color-btn-primary;
     border-color: $color-btn-primary;
     color: #fff;
+
+    &:hover {
+      background: #1d4ed8;
+      border-color: #1d4ed8;
+    }
   }
   &--lg {
     font-size: 1.125rem;
