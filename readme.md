@@ -27,9 +27,10 @@ All blocks are organized under the **"EM Blocks"** category for easy discovery.
 - **Purpose:** Display frequently asked questions in an interactive accordion
 - **Features:**
   - Add unlimited FAQ items
+  - Edit questions and answers directly in the block editor
+  - Reorder or remove items with inline controls
   - Smooth expand/collapse animations
   - Clean, accessible design
-  - Easy content management
 - **Category:** EM Blocks
 
 ### **EM CTA Banner**
@@ -76,14 +77,13 @@ All blocks are organized under the **"EM Blocks"** category for easy discovery.
 1. **Add Blocks:** In the WordPress block editor, click the **+** button
 2. **Find EM Blocks:** Look for the **"EM Blocks"** category or search for "EM"
 3. **Select Block:** Choose from Carousel, FAQ Accordion, CTA Banner, Feature Cards, Testimonial, or Process Steps
-4. **Customize:** Use the block settings panel to configure options
+4. **Customize:** Use each block's inline controls and settings. FAQ questions and answers are edited directly in the block.
 5. **Publish:** Save your page/post to see the blocks in action
 
 ## Development
 
 ### Requirements
-- Node.js 16+
-- npm 7+
+- Node.js 24.18+ and npm 11.16+ for the development and test toolchain
 - WordPress 6.1+
 - PHP 7.0+
 
@@ -139,6 +139,10 @@ npm run test:e2e
 ### File Structure
 ```
 em-block-collection/
+├── .github/workflows/   # Continuous integration
+├── assets/              # Static assets
+├── build/               # Compiled files
+├── includes/classes/    # PHP block classes
 ├── src/                 # Source files
 │   ├── carousel/        # Carousel block
 │   ├── faq-accordion/   # FAQ accordion block
@@ -146,9 +150,7 @@ em-block-collection/
 │   ├── feature-cards/   # Feature cards block
 │   ├── testimonial/     # Testimonial block
 │   └── process-steps/   # Process steps block
-├── build/               # Compiled files
-├── includes/classes/    # PHP block classes
-└── assets/              # Static assets
+└── tests/               # PHP, editor, and browser tests
 ```
 
 ## Customization
