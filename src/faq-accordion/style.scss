@@ -90,4 +90,42 @@
 // Editor only styles
 .block-editor .em-faq-accordion {
 	box-shadow: 0 0 0 2px #007cba33;
+
+	.faq-item {
+		position: relative;
+		padding-right: 6.5rem;
+	}
+
+	.faq-item__editor-controls {
+		position: absolute;
+		top: 0.65rem;
+		right: 0;
+		display: flex;
+		gap: 0.2rem;
+	}
+
+	.faq-question--editor {
+		min-height: 1.5rem;
+		outline: none;
+	}
+
+	.faq-answer__inner--editor {
+		min-height: 3rem;
+		padding: 0.25rem 0.25rem 1rem;
+		outline: none;
+	}
+
+	.faq-question--editor:focus,
+	.faq-answer__inner--editor:focus {
+		box-shadow: 0 0 0 2px #007cba;
+	}
+
+	.faq-empty-state {
+		padding: 1rem 0;
+		text-align: center;
+	}
+
+	.faq-add-button {
+		margin-top: 1rem;
+	}
 }
