@@ -8,7 +8,7 @@
 
 ## Overview
 
-EM Block Collection is a professional WordPress plugin that adds custom Gutenberg blocks to your site. Create engaging, interactive content with modern, responsive blocks designed for optimal user experience and performance.
+EM Block Collection adds a small set of Gutenberg blocks for common site sections: calls to action, service highlights, testimonials, process steps, FAQs, and post carousels.
 
 ## Included Blocks
 
@@ -16,11 +16,10 @@ All blocks are organized under the **"EM Blocks"** category for easy discovery.
 
 ### **EM Carousel**
 - **Purpose:** Display posts in a responsive, scrollable carousel
-- **Features:** 
+- **Features:**
   - Customizable post count and categories
-  - Show/hide excerpts and featured images
+  - Optional post excerpts
   - Slick carousel integration
-  - Mobile-responsive design
 - **Category:** EM Blocks
 
 ### **EM FAQ Accordion**
@@ -30,7 +29,6 @@ All blocks are organized under the **"EM Blocks"** category for easy discovery.
   - Edit questions and answers directly in the block editor
   - Reorder or remove items with inline controls
   - Smooth expand/collapse animations
-  - Clean, accessible design
 - **Category:** EM Blocks
 
 ### **EM CTA Banner**
@@ -51,13 +49,10 @@ All blocks are organized under the **"EM Blocks"** category for easy discovery.
 
 ## Features
 
-- **Unified Block Category:** All blocks organized under "EM Blocks" for better discoverability
-- **Responsive Design:** Mobile-first approach for all devices
-- **Performance Optimized:** Server-side rendering for fast loading
-- **Professional Architecture:** Clean, object-oriented codebase
-- **WordPress Standards:** Follows modern WordPress development best practices
-- **Customizable:** Extensive options and settings for each block
-- **Accessible:** Built with accessibility in mind
+- All blocks appear in the **EM Blocks** inserter category.
+- Blocks render on the server, so their front-end markup is available without depending on editor JavaScript.
+- Source styles live with the block that uses them under `src/`.
+- The project includes PHP, editor, and browser smoke tests.
 
 ## Installation
 
@@ -172,17 +167,7 @@ em-block-collection/
 ## Changelog
 
 ### Version 0.1.0
-- ✅ Initial release
-- ✅ EM Carousel block
-- ✅ EM FAQ Accordion block
-- ✅ EM CTA Banner block
-- ✅ EM Feature Cards block
-- ✅ EM Testimonial block
-- ✅ EM Process Steps block
-- ✅ Unified "EM Blocks" category
-- ✅ Professional class-based architecture
-- ✅ Server-side rendering
-- ✅ Mobile-responsive design
+- Initial release with Carousel, FAQ Accordion, CTA Banner, Feature Cards, Testimonial, and Process Steps blocks.
 
 ## Support & Contribution
 
