@@ -4,7 +4,6 @@
   "description": "A collection of WordPress custom Gutenberg blocks.",
   "author": "Esmond Mccain <esmondmccain@gmail.com>",
   "license": "GPL-2.0-or-later",
-  "main": "src/index.js",
   "files": [
     "/build",
     "/assets",
@@ -33,8 +32,8 @@
     "@wordpress/env": "^10.39.0",
     "@wordpress/scripts": "^30.0.0",
     "copy-webpack-plugin": "^13.0.1",
-    "react": "^19.3.0",
-    "react-dom": "^19.3.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
     "webpack-merge": "^6.0.1"
   },
   "keywords": [
