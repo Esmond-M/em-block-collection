@@ -102,6 +102,40 @@ npm run start
 npm run plugin-zip
 ```
 
+### Testing
+
+```bash
+# PHP renderer and registration tests
+composer install
+npm run test:php
+
+# Editor component tests
+npm run test:unit:js
+
+# All unit tests
+npm test
+
+# Start an isolated WordPress environment with Docker
+npm run env:start
+```
+
+The Playwright frontend smoke test targets a prepared page. On this local site, run:
+
+```powershell
+$env:E2E_BASE_URL = 'https://test-plugins.local'
+$env:E2E_SMOKE_PATH = '/test-blocks/'
+npm run test:e2e
+```
+
+The optional editor/publish smoke test requires an explicit test administrator account. `wp-env` uses `admin` / `password` by default:
+
+```powershell
+$env:E2E_BASE_URL = 'http://127.0.0.1:8888'
+$env:WP_ADMIN_USERNAME = 'admin'
+$env:WP_ADMIN_PASSWORD = 'password'
+npm run test:e2e
+```
+
 ### File Structure
 ```
 em-block-collection/
