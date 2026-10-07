@@ -8,9 +8,10 @@ module.exports = merge(defaultConfig, {
         'faq-accordion/view': path.resolve(__dirname, 'src/faq-accordion/view.js'),
         'carousel/index': path.resolve(__dirname, 'src/carousel/index.js'),
         'carousel/view': path.resolve(__dirname, 'src/carousel/view.js'),
-        'posts-grid/index': path.resolve(__dirname, 'src/posts-grid/index.js'),
-        'posts-grid/view': path.resolve(__dirname, 'src/posts-grid/view.js'),
-        'spacer-divider/index': path.resolve(__dirname, 'src/spacer-divider/index.js'),
+        'cta-banner/index': path.resolve(__dirname, 'src/cta-banner/index.js'),
+        'feature-cards/index': path.resolve(__dirname, 'src/feature-cards/index.js'),
+        'testimonial/index': path.resolve(__dirname, 'src/testimonial/index.js'),
+        'process-steps/index': path.resolve(__dirname, 'src/process-steps/index.js'),
     },
     output: {
         path: path.resolve(__dirname, 'build'),

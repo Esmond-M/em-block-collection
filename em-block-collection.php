@@ -71,8 +71,10 @@ final class EmBlockCollection
     {
         require_once plugin_dir_path(__FILE__) . 'includes/classes/emBlockFaqAccordion.php';
         require_once plugin_dir_path(__FILE__) . 'includes/classes/emBlockCarousel.php';
-        require_once plugin_dir_path(__FILE__) . 'includes/classes/emBlockPostGrid.php';
-        require_once plugin_dir_path(__FILE__) . 'includes/classes/emBlockSpacerDivider.php';
+        require_once plugin_dir_path(__FILE__) . 'includes/classes/emBlockCtaBanner.php';
+        require_once plugin_dir_path(__FILE__) . 'includes/classes/emBlockFeatureCards.php';
+        require_once plugin_dir_path(__FILE__) . 'includes/classes/emBlockTestimonial.php';
+        require_once plugin_dir_path(__FILE__) . 'includes/classes/emBlockProcessSteps.php';
     }
 
     /**
@@ -82,8 +84,10 @@ final class EmBlockCollection
     {
         new \emBlockCollection\emBlockFaqAccordion();
         new \emBlockCollection\emBlockCarousel();
-        new \emBlockCollection\emBlockPostGrid();
-        new \emBlockCollection\emBlockSpacerDivider();
+        new \emBlockCollection\emBlockCtaBanner();
+        new \emBlockCollection\emBlockFeatureCards();
+        new \emBlockCollection\emBlockTestimonial();
+        new \emBlockCollection\emBlockProcessSteps();
     }
 }
 

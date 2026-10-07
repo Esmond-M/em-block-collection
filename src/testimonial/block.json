@@ -1,0 +1,35 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "em-block-collection/testimonial",
+	"version": "0.2.0",
+	"title": "EM Testimonial",
+	"category": "em-blocks",
+	"description": "Present a client quote with an optional portrait and attribution.",
+	"textdomain": "em-block-collection",
+	"supports": {
+		"anchor": true,
+		"align": [ "wide", "full" ],
+		"color": { "background": true, "text": true },
+		"spacing": { "margin": true, "padding": true },
+		"html": false
+	},
+	"attributes": {
+		"quote": {
+			"type": "string",
+			"default": "Working together was straightforward, thoughtful, and effective."
+		},
+		"name": { "type": "string", "default": "Client name" },
+		"role": { "type": "string", "default": "" },
+		"imageId": { "type": "number" },
+		"imageUrl": { "type": "string", "default": "" },
+		"imageAlt": { "type": "string", "default": "" },
+		"layout": {
+			"type": "string",
+			"default": "stacked",
+			"enum": [ "stacked", "inline" ]
+		}
+	},
+	"editorScript": "file:./index.js",
+	"style": "file:./style-index.css"
+}

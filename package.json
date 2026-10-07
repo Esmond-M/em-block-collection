@@ -17,7 +17,7 @@
     "lint:css": "wp-scripts lint-style",
     "lint:js": "wp-scripts lint-js",
     "packages-update": "wp-scripts packages-update",
-    "plugin-zip": "wp-scripts plugin-zip",
+    "plugin-zip": "wp-scripts plugin-zip && node -e \"const fs=require('fs');fs.mkdirSync('dist',{recursive:true});fs.renameSync('em-block-collection.zip','dist/em-block-collection.zip')\"",
     "start": "wp-scripts start --webpack-copy-php"
   },
   "devDependencies": {

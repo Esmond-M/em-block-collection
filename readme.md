@@ -32,26 +32,21 @@ All blocks are organized under the **"EM Blocks"** category for easy discovery.
   - Easy content management
 - **Category:** EM Blocks
 
-### **EM Posts Grid**
-- **Purpose:** Show posts in customizable grid or list layouts
-- **Features:**
-  - Multiple layout options (grid/list)
-  - Featured image display options
-  - Excerpt length control
-  - Post date and meta display
-  - Custom post type support
-- **Category:** EM Blocks
+### **EM CTA Banner**
+- **Purpose:** Give visitors a clear next step with a heading, supporting copy, and up to two actions
+- **Features:** Theme-aware color and spacing controls, contained or full-width layouts, responsive actions
 
-### **EM Spacer + Divider Pro** 
-- **Purpose:** Add customizable spacing and dividers between content sections
-- **Features:**
-  - Flexible spacing controls (top/bottom)
-  - Advanced divider options with 6 styles (solid, dashed, dotted, double, groove, ridge)
-  - Full color picker with alpha support
-  - Position control (top, center, bottom)
-  - Length and alignment customization
-  - Custom CSS class support
-- **Category:** EM Blocks
+### **EM Feature Cards**
+- **Purpose:** Present services or capabilities in a responsive card grid
+- **Features:** Repeatable cards, editable markers, two- or three-column layout, mobile stacking
+
+### **EM Testimonial**
+- **Purpose:** Present a client quote with clear attribution
+- **Features:** Optional WordPress Media Library portrait, stacked or inline attribution layouts
+
+### **EM Process Steps**
+- **Purpose:** Explain an ordered process for a service, project, or onboarding flow
+- **Features:** Repeatable semantic steps, visible numbering, responsive presentation
 
 ## Features
 
@@ -80,7 +75,7 @@ All blocks are organized under the **"EM Blocks"** category for easy discovery.
 
 1. **Add Blocks:** In the WordPress block editor, click the **+** button
 2. **Find EM Blocks:** Look for the **"EM Blocks"** category or search for "EM"
-3. **Select Block:** Choose from Carousel, FAQ Accordion, Posts Grid, or Spacer + Divider Pro
+3. **Select Block:** Choose from Carousel, FAQ Accordion, CTA Banner, Feature Cards, Testimonial, or Process Steps
 4. **Customize:** Use the block settings panel to configure options
 5. **Publish:** Save your page/post to see the blocks in action
 
@@ -102,6 +97,9 @@ npm run build
 
 # Development build with watch
 npm run start
+
+# Create a distributable plugin ZIP in dist/
+npm run plugin-zip
 ```
 
 ### File Structure
@@ -110,8 +108,10 @@ em-block-collection/
 ├── src/                 # Source files
 │   ├── carousel/        # Carousel block
 │   ├── faq-accordion/   # FAQ accordion block
-│   ├── posts-grid/      # Posts grid block
-│   └── spacer-divider/  # Spacer + divider block
+│   ├── cta-banner/      # CTA banner block
+│   ├── feature-cards/   # Feature cards block
+│   ├── testimonial/     # Testimonial block
+│   └── process-steps/   # Process steps block
 ├── build/               # Compiled files
 ├── includes/classes/    # PHP block classes
 └── assets/              # Static assets
@@ -139,8 +139,10 @@ em-block-collection/
 - ✅ Initial release
 - ✅ EM Carousel block
 - ✅ EM FAQ Accordion block
-- ✅ EM Posts Grid block
-- ✅ EM Spacer + Divider Pro block
+- ✅ EM CTA Banner block
+- ✅ EM Feature Cards block
+- ✅ EM Testimonial block
+- ✅ EM Process Steps block
 - ✅ Unified "EM Blocks" category
 - ✅ Professional class-based architecture
 - ✅ Server-side rendering
