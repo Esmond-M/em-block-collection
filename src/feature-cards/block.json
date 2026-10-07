@@ -1,0 +1,43 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "em-block-collection/feature-cards",
+	"version": "0.2.0",
+	"title": "EM Feature Cards",
+	"category": "em-blocks",
+	"description": "Present services or features in a responsive card grid.",
+	"textdomain": "em-block-collection",
+	"supports": {
+		"anchor": true,
+		"align": [ "wide", "full" ],
+		"color": { "background": true, "text": true },
+		"spacing": { "margin": true, "padding": true },
+		"html": false
+	},
+	"attributes": {
+		"heading": { "type": "string", "default": "What we can help with" },
+		"columns": { "type": "number", "default": 3 },
+		"items": {
+			"type": "array",
+			"default": [
+				{
+					"icon": "01",
+					"title": "Strategy",
+					"content": "Turn an idea into a practical, focused plan."
+				},
+				{
+					"icon": "02",
+					"title": "Design",
+					"content": "Create an experience that is clear and built for people."
+				},
+				{
+					"icon": "03",
+					"title": "Development",
+					"content": "Ship a fast, maintainable website that lasts."
+				}
+			]
+		}
+	},
+	"editorScript": "file:./index.js",
+	"style": "file:./style-index.css"
+}

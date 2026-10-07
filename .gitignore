@@ -26,3 +26,8 @@ node_modules/
 # dotenv environment variables file
 .env
 /build
+/dist
+/vendor
+/playwright-report
+/test-results
+.phpunit.result.cache

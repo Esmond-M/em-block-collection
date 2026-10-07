@@ -1,7 +1,7 @@
 // Colors
-$color-modal-bg: #ffffff !default;
-$color-modal-text: #111111 !default;
-$color-modal-overlay: rgba(17, 24, 39, .55) !default;
+$color-modal-bg: #fff !default;
+$color-modal-text: #111 !default;
+$color-modal-overlay: rgba(17, 24, 39, 0.55) !default;
 
 $color-btn-bg: #111827 !default;
 $color-btn-primary: #2563eb !default;
@@ -9,7 +9,7 @@ $color-btn-border: #e5e7eb !default;
 
 $color-field-border: #d1d5db !default;
 
-$color-masonry-bg: #ffffff !default;
+$color-masonry-bg: #fff !default;
 $color-masonry-text: #111827 !default;
 $color-masonry-meta: #6b7280 !default;
 
@@ -19,8 +19,8 @@ $border-radius-btn: 10px !default;
 $border-radius-field: 8px !default;
 
 // Shadows
-$box-shadow-modal: 0 20px 60px rgba(0,0,0,.25) !default;
-$box-shadow-masonry: 0 6px 18px rgba(0,0,0,.08) !default;
+$box-shadow-modal: 0 20px 60px rgba(0, 0, 0, 0.25) !default;
+$box-shadow-masonry: 0 6px 18px rgba(0, 0, 0, 0.08) !default;
 
 // Layout
 $container-max: 1200px !default;

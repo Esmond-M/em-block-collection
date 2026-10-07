@@ -1,0 +1,12 @@
+{
+  "name": "esmond-m/em-block-collection",
+  "description": "A collection of custom Gutenberg blocks.",
+  "type": "wordpress-plugin",
+  "license": "GPL-2.0-or-later",
+  "require-dev": {
+    "phpunit/phpunit": "^9.6"
+  },
+  "scripts": {
+    "test": "phpunit"
+  }
+}

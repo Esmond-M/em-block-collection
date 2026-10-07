@@ -1,0 +1,46 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "em-block-collection/cta-banner",
+	"version": "0.2.0",
+	"title": "EM CTA Banner",
+	"category": "em-blocks",
+	"description": "Highlight a next step with a heading, copy, and one or two links.",
+	"textdomain": "em-block-collection",
+	"supports": {
+		"anchor": true,
+		"align": [ "wide", "full" ],
+		"color": {
+			"background": true,
+			"text": true
+		},
+		"spacing": {
+			"margin": true,
+			"padding": true
+		},
+		"typography": {
+			"fontSize": true,
+			"lineHeight": true
+		},
+		"html": false
+	},
+	"attributes": {
+		"eyebrow": { "type": "string", "default": "" },
+		"heading": { "type": "string", "default": "Ready to start a project?" },
+		"content": {
+			"type": "string",
+			"default": "Give your visitors a clear next step."
+		},
+		"primaryLabel": { "type": "string", "default": "Get in touch" },
+		"primaryUrl": { "type": "string", "default": "" },
+		"secondaryLabel": { "type": "string", "default": "" },
+		"secondaryUrl": { "type": "string", "default": "" },
+		"layout": {
+			"type": "string",
+			"default": "contained",
+			"enum": [ "contained", "full-width" ]
+		}
+	},
+	"editorScript": "file:./index.js",
+	"style": "file:./style-index.css"
+}

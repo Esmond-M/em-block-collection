@@ -4,7 +4,6 @@
   "description": "A collection of WordPress custom Gutenberg blocks.",
   "author": "Esmond Mccain <esmondmccain@gmail.com>",
   "license": "GPL-2.0-or-later",
-  "main": "src/index.js",
   "files": [
     "/build",
     "/assets",
@@ -14,15 +13,27 @@
   "scripts": {
     "build": "wp-scripts build --webpack-copy-php",
     "format": "wp-scripts format",
-    "lint:css": "wp-scripts lint-style",
-    "lint:js": "wp-scripts lint-js",
+    "lint:css": "stylelint \"src/{cta-banner,feature-cards,testimonial,process-steps}/style.scss\" --config node_modules/@wordpress/scripts/config/.stylelintrc.json",
+    "lint:js": "wp-scripts lint-js src/faq-accordion src/carousel src/cta-banner src/feature-cards src/testimonial src/process-steps tests/js tests/e2e playwright.config.js webpack.config.js",
     "packages-update": "wp-scripts packages-update",
-    "plugin-zip": "wp-scripts plugin-zip",
-    "start": "wp-scripts start --webpack-copy-php"
+    "plugin-zip": "wp-scripts plugin-zip && node -e \"const fs=require('fs');fs.mkdirSync('dist',{recursive:true});fs.renameSync('em-block-collection.zip','dist/em-block-collection.zip')\"",
+    "start": "wp-scripts start --webpack-copy-php",
+    "test": "npm run test:unit:js && npm run test:php",
+    "test:unit:js": "wp-scripts test-unit-js --runInBand",
+    "test:php": "composer test",
+    "test:e2e": "playwright test",
+    "env:start": "wp-env start",
+    "env:stop": "wp-env stop",
+    "env:destroy": "wp-env destroy"
   },
   "devDependencies": {
+    "@playwright/test": "^1.64.0",
+    "@testing-library/react": "^16.3.3",
+    "@wordpress/env": "^10.39.0",
     "@wordpress/scripts": "^30.0.0",
     "copy-webpack-plugin": "^13.0.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
     "webpack-merge": "^6.0.1"
   },
   "keywords": [

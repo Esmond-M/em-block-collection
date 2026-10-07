@@ -1,0 +1,63 @@
+.wp-block-em-block-collection-feature-cards {
+	max-width: 72rem;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.em-feature-cards__heading {
+	max-width: 42rem;
+	margin: 0 0 2rem;
+	font-size: clamp(1.75rem, 3vw, 2.5rem);
+	line-height: 1.15;
+}
+
+.em-feature-cards__grid {
+	display: grid;
+	gap: 1rem;
+
+	&.columns-2 {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+
+	&.columns-3 {
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+	}
+}
+
+.em-feature-cards__card {
+	padding: 1.5rem;
+	border: 1px solid #cbd5d9;
+	background: #fff;
+}
+
+.em-feature-cards__icon {
+	display: inline-flex;
+	min-width: 2.5rem;
+	min-height: 2.5rem;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 1.5rem;
+	border: 1px solid #0f4c5c;
+	color: #0f4c5c;
+	font-weight: 700;
+}
+
+.em-feature-cards__title {
+	margin: 0;
+	color: #0f1720;
+	font-size: 1.25rem;
+}
+
+.em-feature-cards__description {
+	margin: 0.75rem 0 0;
+	color: #41515a;
+	line-height: 1.6;
+}
+
+@media (max-width: 640px) {
+
+	.em-feature-cards__grid.columns-2,
+	.em-feature-cards__grid.columns-3 {
+		grid-template-columns: 1fr;
+	}
+}

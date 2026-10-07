@@ -1,0 +1,84 @@
+.wp-block-em-block-collection-cta-banner {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 2rem;
+	padding: 2.5rem;
+	border: 1px solid currentcolor;
+	background: #0f4c5c;
+	color: #fff;
+
+	&.is-layout-contained {
+		max-width: 72rem;
+		margin-right: auto;
+		margin-left: auto;
+	}
+}
+
+.em-cta-banner__content {
+	max-width: 46rem;
+}
+
+.em-cta-banner__eyebrow {
+	margin: 0 0 0.5rem;
+	font-size: 0.875rem;
+	font-weight: 700;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+}
+
+.em-cta-banner__heading {
+	margin: 0;
+	color: inherit;
+	font-size: clamp(1.75rem, 3vw, 2.75rem);
+	line-height: 1.1;
+}
+
+.em-cta-banner__description {
+	margin: 1rem 0 0;
+	font-size: 1.0625rem;
+	line-height: 1.6;
+}
+
+.em-cta-banner__actions {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.75rem;
+	flex-shrink: 0;
+}
+
+.em-cta-banner__button {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 2.75rem;
+	padding: 0.625rem 1rem;
+	border: 2px solid currentcolor;
+	border-radius: 0;
+	font-weight: 700;
+	line-height: 1.2;
+	text-decoration: none;
+
+	&:focus-visible {
+		outline: 3px solid currentcolor;
+		outline-offset: 3px;
+	}
+}
+
+.em-cta-banner__button--primary {
+	background: #fff;
+	color: #0f4c5c;
+}
+
+.em-cta-banner__button--secondary {
+	color: inherit;
+}
+
+@media (max-width: 640px) {
+
+	.wp-block-em-block-collection-cta-banner {
+		align-items: flex-start;
+		flex-direction: column;
+		padding: 1.75rem;
+	}
+}

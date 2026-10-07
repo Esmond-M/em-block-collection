@@ -3,10 +3,15 @@
  * Styles specific to the block's user interface.
  *
  */
-@import 'scss/variables';
+@use "scss/variables" as *;
 
 .carousel.is-editor {
-  .card.is-skeleton {
-    .card__media { background: #e5e7eb; height: 140px; }
-  }
+
+	.card.is-skeleton {
+
+		.card__media {
+			background: #e5e7eb;
+			height: 140px;
+		}
+	}
 }
